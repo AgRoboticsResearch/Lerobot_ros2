@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: so101_follower_description
+    relative_path: urdf/so101_follower.urdf.xacro
+  srdf:
+    relative_path: config/so101_follower.srdf
+  package_settings:
+    author_name: hls
+    author_email: hls@zju.edu.cn
+    generated_timestamp: 1750213684
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

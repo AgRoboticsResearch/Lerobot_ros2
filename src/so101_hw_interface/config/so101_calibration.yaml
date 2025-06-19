@@ -1,0 +1,25 @@
+generated: '2025-06-19T14:32:38.435515'
+shoulder_pan:
+  range_min: 745
+  range_max: 3424
+  homing_offset: 2084
+shoulder_lift:
+  range_min: 740
+  range_max: 3370
+  homing_offset: 2055
+elbow_flex:
+  range_min: 976
+  range_max: 3130
+  homing_offset: 2053
+wrist_flex:
+  range_min: 588
+  range_max: 2917
+  homing_offset: 1752
+wrist_roll:
+  range_min: 2000  # very wide test range: home ± 1883 steps (≈±165°)
+  range_max: 5766  # very wide test range: home ± 1883 steps (≈±165°)
+  homing_offset: 3883  # keep original home offset
+gripper:
+  range_min: 2047
+  range_max: 3489
+  homing_offset: 2768

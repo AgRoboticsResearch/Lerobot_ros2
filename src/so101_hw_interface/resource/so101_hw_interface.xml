@@ -1,0 +1,9 @@
+<library path="so101_hw_interface">
+  <class name="so101_hw_interface/SO101SystemInterface"
+         type="so101_hw_interface.so101_system_interface.SO101SystemInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      ROS2 control hardware interface for SO101 follower arm.
+    </description>
+  </class>
+</library> 

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<robot name="so101_follower">
+  <ros2_control name="so101_follower" type="system">
+    <hardware>
+      <plugin>topic_based_ros2_control/TopicBasedSystem</plugin>
+      <param name="joint_commands_topic">/so101_follower/joint_commands</param>
+      <param name="joint_states_topic">/so101_follower/joint_states</param>
+    </hardware>
+    <joint name="shoulder_pan">
+      <param name="id">1</param>
+      <param name="model">sts3215</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="shoulder_lift">
+      <param name="id">2</param>
+      <param name="model">sts3215</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="elbow_flex">
+      <param name="id">3</param>
+      <param name="model">sts3215</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="wrist_flex">
+      <param name="id">4</param>
+      <param name="model">sts3215</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="wrist_roll">
+      <param name="id">5</param>
+      <param name="model">sts3215</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="gripper">
+      <param name="id">6</param>
+      <param name="model">sts3215</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+</robot> 

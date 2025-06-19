@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+from so101_hw_interface.calibrate_arm import main
+ 
+if __name__ == '__main__':
+    main() 
