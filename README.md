@@ -88,6 +88,35 @@ ros2 launch so101_hw_interface so101_hw.launch.py
 ros2 run so101_hw_interface so101_calibrate
 ```
 
+## 🎛️ Advanced Usage
+
+### Hardware Control with Joint State Publisher
+For manual joint control and visualization with the hardware interface:
+
+```bash
+# Terminal 1: Launch robot visualization without GUI
+ros2 launch so101_follower_description display.launch.py \
+    use_gui:=false \
+    joint_states_topic:=/so101_follower/joint_states
+
+# Terminal 2: Start the motor bridge (hardware interface)
+ros2 run so101_hw_interface so101_motor_bridge
+
+# Terminal 3: Launch joint state publisher GUI for manual control
+ros2 run joint_state_publisher_gui joint_state_publisher_gui \
+    --ros-args -r /joint_states:=/so101_follower/joint_commands
+```
+
+This setup allows you to:
+- **Visualize** the robot in RViz with real joint states from hardware
+- **Control** joint positions manually using the GUI sliders
+- **Monitor** real-time feedback from the Feetech servos
+
+### Topic Remapping Guide
+- `/so101_follower/joint_states`: Real joint positions from hardware
+- `/so101_follower/joint_commands`: Desired joint positions to hardware
+- Use topic remapping (`-r`) to connect different components
+
 ## 🔧 Configuration
 
 ### Hardware Setup
