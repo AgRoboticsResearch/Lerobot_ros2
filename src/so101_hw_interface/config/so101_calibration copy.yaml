@@ -20,6 +20,6 @@ wrist_roll:
   range_max: 5766  # very wide test range: home ± 1883 steps (≈±165°)
   homing_offset: 3883  # keep original home offset
 gripper:
-  range_min: 2062
-  range_max: 3396
-  homing_offset: 2062
+  range_min: 2047
+  range_max: 3489
+  homing_offset: 2768

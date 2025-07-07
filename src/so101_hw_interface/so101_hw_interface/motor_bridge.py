@@ -18,6 +18,7 @@ from sensor_msgs.msg import JointState
 import sys
 import math
 import yaml, pathlib
+from ament_index_python.packages import get_package_share_directory
 
 # -----------------------------------------------------------------------------
 # Provide lightweight stubs for optional third-party dependencies that the
@@ -59,8 +60,12 @@ JOINTS = {
     "gripper": {"id": 6, "model": "sts3215"},
 }
 
-# default calibration path
-CALIB_FILE = pathlib.Path.home() / ".so101_follower_calibration.yaml"
+# Default calibration file distributed with the package (can be overridden by
+# the ROS parameter "calib_file").
+CALIB_FILE = (
+    pathlib.Path(get_package_share_directory("so101_hw_interface"))
+    / "config/so101_calibration.yaml"
+)
 
 class MotorBridge(Node):
     def __init__(self):
