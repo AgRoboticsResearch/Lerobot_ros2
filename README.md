@@ -51,7 +51,7 @@ Generic topic-based control interface for:
 
 1. Clone the repository:
 ```bash
-git clone git@github.com:forgetwhatuwant/Lerobot_ros2.git
+git clone https://github.com/AgRoboticsResearch/Lerobot_ros2.git
 cd Lerobot_ros2
 ```
 
